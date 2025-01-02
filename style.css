@@ -44,9 +44,9 @@ body {
 .article-tags {
     display: flex;
     justify-content: center;
+    gap: 0.75rem;
     padding: 1rem 0;
     cursor: pointer;
-    gap: 0.5rem;
 }
 
 .headline,
@@ -170,7 +170,7 @@ aside {
 }
 
 .section-1 {
-    padding: 3rem 0;
+    padding: 3rem;
     columns: 2 600px;
     column-gap: 4em;
     column-fill: auto;
