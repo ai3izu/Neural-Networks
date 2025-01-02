@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const contentMap = {
         "O sieciach": `
-        <p class="first-paragraph">Sieci neuronowe to jeden z filarów współczesnej sztucznej inteligencji, który
+        <p>Sieci neuronowe to jeden z filarów współczesnej sztucznej inteligencji, który
                 zmienia sposób, w jaki komputery uczą się i podejmują decyzje. Inspirowane strukturą ludzkiego mózgu,
                 składają się z warstw połączonych ze sobą neuronów – niewielkich jednostek przetwarzających dane. Każdy
                 neuron analizuje informacje i przekazuje je dalej, umożliwiając sieci uczenie się na podstawie
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 naszych oczach.</p>
     `,
         "Działanie": `
-        <p class="first-paragraph">Sieci neuronowe to skomplikowane systemy, które naśladują sposób działania ludzkiego mózgu,
+        <p>Sieci neuronowe to skomplikowane systemy, które naśladują sposób działania ludzkiego mózgu,
             by rozwiązywać złożone problemy. Ich struktura opiera się na trzech głównych elementach: warstwie wejściowej, 
             warstwach ukrytych i warstwie wyjściowej. Dane trafiają najpierw do warstwy wejściowej, 
             gdzie są odpowiednio przekształcane, aby mogły zostać przetworzone przez kolejne warstwy.</p>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             na wielką skalę.</p>
     `,
         "Zastosowanie": `
-        <p class="first-paragraph">Sieci neuronowe to technologia, która znajduje zastosowanie w wielu dziedzinach, 
+        <p>Sieci neuronowe to technologia, która znajduje zastosowanie w wielu dziedzinach, 
             zmieniając sposób, w jaki rozwiązujemy różnorodne problemy. 
             Dzięki zdolności do wykrywania wzorców w dużych zbiorach danych, 
             są wykorzystywane do rozpoznawania obrazów, analizy tekstów czy przewidywania trendów. 
