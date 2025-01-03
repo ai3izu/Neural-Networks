@@ -95,14 +95,7 @@ h2 {
     max-width: 1200px;
     width: 100%;
 }
-.section-1 p {
-    font-size: 1.2rem;
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5);
-}
+
 
 .section-title {
     font-family: "Chakra Petch", sans-serif;
@@ -130,10 +123,12 @@ h2 {
 }
 
 #article-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    text-align: justify;
     line-height: 1.8;
     margin-bottom: 1.5rem;
-    color: rgb(174, 186, 206);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .tag {
