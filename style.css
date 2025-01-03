@@ -86,13 +86,22 @@ h2 {
     text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
-.section-1 {
+.section-1, .section-2{
     padding: 3rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin: 0 auto;
     max-width: 1200px;
+    width: 100%;
+}
+.section-1 p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 .section-title {
@@ -115,8 +124,8 @@ h2 {
 .article-tags {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 3rem;
-    justify-content: space-evenly;
     padding: 1rem 0;
 }
 
@@ -132,10 +141,73 @@ h2 {
     color: #fff;
     font-weight: 700;
     padding: 0.75rem;
+    border-radius: 10px;
     border: 2px solid #fb3ae3;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.tag.active {
+    color: #fb3ae3;
+    text-shadow: 10px 30px 10px #fb3ae3, 0 0 10px #fb3ae3;
+}
+
+.section-2-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+}
+
+.activation-function-article {
+    flex: 2;
+    padding: 2rem;
+    background-color: #261828;
+    border-radius: 10px;
+    border: 2px solid #fb3ae3;
+    box-shadow: 0 4px 10px #7b096d;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.7), 0 0 10px rgba(0, 255, 0, 0.5);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    height: auto;
+    min-height: 300px;
+}
+
+.activation-function-aside {
+    flex: 1;
+    padding: 2rem;
+    background-color: #1e1e2e;
+    border-radius: 10px;
+    border: 2px solid #fb3ae3;
+    box-shadow: 0 4px 10px #7b096d;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    min-height: 300px;
+}
+
+.function-btn {
+    background-color: #261828;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: 2px solid #fb3ae3;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.function-btn:hover {
+    background-color: #fb3ae3;
+    color: #1e1e2e;
+    box-shadow: 0 4px 10px #fb3ae3;
 }
 
 footer {
@@ -157,7 +229,7 @@ footer a:hover {
 }
 
 aside.full-width-span {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     padding: 2rem;
     margin: 0 auto;
@@ -165,7 +237,7 @@ aside.full-width-span {
     background-color: #261828;
     border-radius: 10px;
     border: 2px solid #fb3ae3;
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 4px 10px #7b096d;
 }
 
 aside.full-width-span p {
@@ -193,6 +265,11 @@ aside.full-width-span p {
     .article-meta {
         font-size: 0.7rem;
     }
+    .article-tags{
+        flex-direction: column;
+        width:75%;
+        margin: auto;
+    }
 
     .section-1 {
         padding: 2rem;
@@ -203,7 +280,7 @@ aside.full-width-span p {
     }
 
     aside.full-width-span {
-        width: 85%;/
+        width: 80%;
     }
 
     aside.full-width-span p {
@@ -217,6 +294,17 @@ aside.full-width-span p {
     .section-title {
         font-size: 2rem;
         padding: 0.4rem;
+    }
+
+    .section-2-container {
+        flex-direction: column;
+    }
+
+    .activation-function-article, 
+    .activation-function-aside {
+        flex: 1;
+        width: 100%;
+        min-height: 250px;
     }
 }
 
@@ -234,7 +322,7 @@ aside.full-width-span p {
     }
 
     aside.full-width-span {
-        width: 85%;
+        width: 78%;
     }
 
     aside.full-width-span p {
@@ -248,6 +336,16 @@ aside.full-width-span p {
     .section-title {
         font-size: 1.8rem;
         padding: 0.35rem;
+    }
+
+    .section-2 {
+        width: 90%;
+    }
+
+    .activation-function-article, 
+    .activation-function-aside {
+        font-size: 1rem;
+        padding: 1.5rem;
     }
 }
 
@@ -265,7 +363,7 @@ aside.full-width-span p {
     }
 
     aside.full-width-span {
-        width: 85%;
+        width: 80%;
     }
 
     aside.full-width-span p {
@@ -279,5 +377,20 @@ aside.full-width-span p {
     .section-title {
         font-size: 1.5rem;
         padding: 0.3rem;
+    }
+
+    .section-2 {
+        width: 95%;
+    }
+
+    .activation-function-article, 
+    .activation-function-aside {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .function-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem;
     }
 }
