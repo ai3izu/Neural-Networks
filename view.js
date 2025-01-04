@@ -1,4 +1,8 @@
+window.onload = () => {
+    MathJax.typesetPromise = MathJax.startup.promise;
+}
 document.addEventListener("DOMContentLoaded", () => {
+    
     const contentMap = {
         "O sieciach": `
         <p>Sieci neuronowe to technologia, która została zainspirowana sposobem, w jaki działa ludzki mózg. 
