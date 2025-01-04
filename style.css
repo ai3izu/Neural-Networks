@@ -352,7 +352,8 @@ footer a:hover {
     }
 
     .section-1,
-    .section-2 {
+    .section-2,
+    .section-4 {
         padding: 2rem;
     }
 
@@ -411,7 +412,9 @@ footer a:hover {
         font-size: 1.2rem;
     }
 
-    .section-1 {
+    .section-1,
+    .section-2,
+    .section-4 {
         padding: 2rem;
     }
 
@@ -464,7 +467,8 @@ footer a:hover {
     }
 
     .section-1,
-    .section-2 {
+    .section-2,
+    .section-4 {
         padding: 1.5rem;
     }
 
@@ -503,11 +507,6 @@ footer a:hover {
     .neural-network-types-article li {
         font-size: 0.9rem;
     }
-
-    .section-4 {
-        width: 95%;
-    }
-
     .activation-function-article,
     .activation-function-aside {
         font-size: 0.9rem;
@@ -518,4 +517,5 @@ footer a:hover {
         font-size: 0.8rem;
         padding: 0.5rem;
     }
+    
 }
