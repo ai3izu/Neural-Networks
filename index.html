@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <script>
         MathJax = {
-          tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-          }
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
         };
-        </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>  
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
     <script src="view.js" defer></script>
 </head>
 
@@ -96,6 +96,13 @@
             <h3 class="section-title">Funkcje aktywacji</h3>
             <div class="section-4-container">
                 <article class="activation-function-article">
+                    <p>ReLU to funkcja aktywacji, która przepuszcza wartość wejściową <em>x</em>, jeśli jest dodatnia, a
+                        w przeciwnym przypadku zwraca <em>0</em>.<br> Matematycznie można ją zapisać za pomocą wzoru:
+                    </p>
+                    <p>$$f(x)=\max(0, x)$$</p>
+                    <p>ReLU wprowadza nieliniowość do modelu, co pozwala sieci neuronowej lepiej uczyć się
+                        złożonych zależności.
+                    </p>
                 </article>
                 <aside class="activation-function-aside">
                     <button class="function-btn" data-function="relu">ReLU</button>
@@ -111,4 +118,5 @@
             neuronowej - projekt. </p>
     </footer>
 </body>
+
 </html>

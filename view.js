@@ -1,6 +1,3 @@
-window.onload = () => {
-    MathJax.typesetPromise = MathJax.startup.promise;
-}
 document.addEventListener("DOMContentLoaded", () => {
     
     const contentMap = {
@@ -144,7 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const activationFunctionTags = document.querySelectorAll(".function-btn");
     const activationFunctionArticle = document.querySelector(".activation-function-article");
 
-    activationFunctionArticle.innerHTML = activationFunctionContentMap["ReLU"];
 
     activationFunctionTags.forEach(tag => {
         tag.addEventListener("click", () => {
