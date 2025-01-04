@@ -10,7 +10,7 @@
 body {
     font-family: "Ubuntu", sans-serif;
     color: #b8bad4;
-    background-color: #040203;
+    background-color: #101010;
     overflow-x: hidden;
     line-height: 1.5;
 }
@@ -88,7 +88,7 @@ h2 {
 
 .section-1,
 .section-2,
-.section-3 {
+.section-4 {
     padding: 3rem;
     display: flex;
     flex-direction: column;
@@ -124,21 +124,30 @@ h2 {
     justify-content: center;
     gap: 3rem;
     padding: 1rem 0;
+    font-size: 1.1rem;
 }
 
 #article-content p {
     text-align: justify;
     color: #fff;
-    font-size: 1.20rem;
-    line-height: 1.8;
-    width: 100%; 
-    padding: 0 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 16px;
+    margin-top: -0.8rem;
+}
+
+#article-content {
+    border: 2px solid #212121;
+    padding: 20px 10px;
+}
+
+#article-content li {
+    list-style: none;
     margin-bottom: 1rem;
 }
-#article-content li {
-   list-style: none;
-   margin-bottom: 1rem;
-}
+
 .tag {
     background-color: #261828;
     color: #fff;
@@ -161,15 +170,22 @@ h2 {
     flex-direction: column;
     gap: 2rem;
     justify-content: flex-start;
-    align-items: stretch; 
+    align-items: stretch;
 }
 
 .neural-network-types-article {
     text-align: justify;
     color: #fff;
-    font-size: 1.35rem;
+    font-size: 1rem;
     line-height: 1.8;
-    width: 100%; 
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 20px 10px;
+    font-size: 16px;
+    margin-top: -0.8rem;
+    border: 2px solid #212121;
+
 }
 
 .neural-network-types-article ul {
@@ -184,12 +200,18 @@ h2 {
 .neural-network-types-aside-text {
     text-align: justify;
     color: #fff;
-    font-size: 1.35rem;
-    padding: 0 1.5rem;
+    font-size: 1.20rem;
     line-height: 1.8;
-    width: 100%; 
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid #212121;
+    border-radius: 8px;
+    padding: 20px 10px;
+    font-size: 16px;
+    margin-top: -0.8rem;
 }
-.section-3-container {
+
+.section-4-container {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -210,7 +232,8 @@ h2 {
     font-size: 1.2rem;
     line-height: 1.8;
     height: auto;
-    min-height: 300px;
+    min-height: 380px;
+    text-align: justify;
 }
 
 .activation-function-aside {
@@ -224,7 +247,7 @@ h2 {
     flex-direction: column;
     gap: 1rem;
     height: auto;
-    min-height: 300px;
+    min-height: 380px;
 }
 
 .function-btn {
@@ -234,16 +257,38 @@ h2 {
     padding: 0.75rem;
     border-radius: 10px;
     border: 2px solid #fb3ae3;
-    cursor: pointer;
-    text-transform: uppercase;
     text-align: center;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .function-btn:hover {
-    background-color: #fb3ae3;
-    color: #1e1e2e;
-    box-shadow: 0 4px 10px #fb3ae3;
+    color: #fff;
+    background-color: #551e39;
+    box-shadow: 0 4px 10px rgba(251, 58, 227, 0.8);
+}
+
+.function-btn.active {
+    color: #fb3ae3;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        background-color: #551e39;
+        box-shadow: 0 0 10px rgba(251, 58, 227, 0.6), 0 0 20px rgba(251, 58, 227, 0.4);
+    }
+
+    50% {
+        background-color: #6d2c4d;
+        box-shadow: 0 0 15px rgba(251, 58, 227, 0.8), 0 0 30px rgba(251, 58, 227, 0.6);
+    }
+
+    100% {
+        background-color: #551e39;
+        box-shadow: 0 0 10px rgba(251, 58, 227, 0.6), 0 0 20px rgba(251, 58, 227, 0.4);
+    }
 }
 
 aside.full-width-span {
@@ -306,7 +351,8 @@ footer a:hover {
         margin: auto;
     }
 
-    .section-1, .section-2 {
+    .section-1,
+    .section-2 {
         padding: 2rem;
     }
 
@@ -331,15 +377,21 @@ footer a:hover {
         padding: 0.4rem;
     }
 
- 
+
     .neural-network-types-article,
     .neural-network-types-aside-text {
         width: 100%;
         font-size: 1.3rem;
     }
 
-    .section-3-container {
-        flex-direction: column;
+    .section-4-container {
+        flex-direction: column-reverse;
+    }
+
+    .function-btn {
+        margin: auto;
+        width: 60%;
+        padding: 0.5rem;
     }
 
     .activation-function-article,
@@ -395,8 +447,8 @@ footer a:hover {
         font-size: 1rem;
     }
 
-    .section-3 {
-        width: 90%;
+    .section-4 {
+        width: 95%;
     }
 
     .activation-function-article,
@@ -411,7 +463,8 @@ footer a:hover {
         font-size: 18vw;
     }
 
-    .section-1, .section-2 {
+    .section-1,
+    .section-2 {
         padding: 1.5rem;
     }
 
@@ -451,7 +504,7 @@ footer a:hover {
         font-size: 0.9rem;
     }
 
-    .section-3 {
+    .section-4 {
         width: 95%;
     }
 

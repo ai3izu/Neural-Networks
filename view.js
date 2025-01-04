@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
         <p>Podstawowe elementy sieci neuronowej to:</p>
         <ol>
-            <li><p>Neurony: Podstawowe jednostki przetwarzające informacje, które odbierają dane, 
+            <li><p><strong>- Neurony:</strong> Podstawowe jednostki przetwarzające informacje, które odbierają dane, 
                     przetwarzają je i przesyłają dalej.
             </p></li>
-            <li><p>Warstwy: Sieci neuronowe składają się z trzech głównych rodzajów warstw: 
+            <li><p><strong>-Warstwy:</strong> Sieci neuronowe składają się z trzech głównych rodzajów warstw: 
                     warstwy wejściowej (gdzie wprowadzane są dane), warstw ukrytych (gdzie odbywa się przetwarzanie) 
                     oraz warstwy wyjściowej (gdzie generowane są końcowe wyniki).
             </p></li>
-            <li><p>Wagi: Każde połączenie między neuronami ma przypisaną wagę, która określa, 
+            <li><p><strong>-Wagi:</strong> Każde połączenie między neuronami ma przypisaną wagę, która określa, 
                     jak ważny jest dany sygnał w procesie podejmowania decyzji przez sieć. 
             </p></li>
-            <li><p>Funkcje aktywacji: Funkcje te pomagają neuronowi zdecydować, 
+            <li><p><strong>-Funkcje aktywacji:</strong> Funkcje te pomagają neuronowi zdecydować, 
                     czy powinien przekazać sygnał dalej, a także w jaki sposób. 
                     Wiele różnych funkcji aktywacji może być używanych, w tym popularne funkcje, 
                     takie jak ReLU (Rectified Linear Unit) czy sigmoidalna. 
@@ -89,6 +89,69 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+
+    const activationFunctionContentMap = {
+        "ReLU": `
+            <p>
+                ReLU to funkcja aktywacji, która przepuszcza wartość wejściową <em>x</em>, jeśli jest dodatnia, 
+                a w przeciwnym przypadku zwraca <em>0</em>.<br> Matematycznie można ją zapisać za pomocą wzoru:
+            </p>
+            <p>$$f(x)=\\max(0, x)$$</p>
+            <p>
+                ReLU wprowadza nieliniowość do modelu, co pozwala sieci neuronowej lepiej uczyć się 
+                złożonych zależności.
+            </p>`,
+        "Sigmoid": `
+            <p>
+                Sigmoid to funkcja aktywacji przekształcająca wartości wejściowe na przedział \(0, 1)\. Sprawdza się dobrze
+                w klasyfikacji binarnej, gdzie potrzebujemy wykryć jedną z dwóch kategorii.</br>
+                Jej wzór matematyczny to:
+            </p>
+            <p>
+            $$f(x) = \\frac{1}{1 + e^{-x}}$$
+            </p>
+            <p>
+            Intuicyjnie pokazuje "pewność" modelu - im bliżej \ 1\, tym bardziej pewny.
+            </p>
+        `,
+        "Tanh": `
+            <p>Tanh to funkcja, która przypomina sinus, ale działa na wartościach od -1, do  1. 
+                Gdy wejście jest bardzo duże, wynik zbliża się do 1, w odwrotnej situacji -1. Wyrażona jest wzorem:
+            </p>
+            <p>
+                $$f(x) = than(x) = \\frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$$
+            </p>
+            <p>
+            Skaluje dane, dzięki czemu są symetryczne wokół zera, co pomaga w uczeniu sieci.
+            </p>
+        `,
+        "Softmax": `
+            <p> Softmax to funkcja, która przekształca liczby na prawdopodobieństwa, sumujące się do 1.
+            Przydaje się w klasyfikacji wieloklasowej — mówi, która klasa ma największą szansę.
+            </p>
+            <p>$$\\mathbf{x} = [x_1, x_2, \\dots, x_n]$$</p>
+            <p>$$f(x_i) = \\frac{e^{x_i}}{\\sum_{j=1}^n e^{x_j}}$$</p>
+            <p>Intuicyjnie rozdziela wyniki, skupiając się na dominujących wartościach.</p>
+        `
+    };
+
+
+    const activationFunctionTags = document.querySelectorAll(".function-btn");
+    const activationFunctionArticle = document.querySelector(".activation-function-article");
+
+    activationFunctionArticle.innerHTML = activationFunctionContentMap["ReLU"];
+
+    activationFunctionTags.forEach(tag => {
+        tag.addEventListener("click", () => {
+            const content = activationFunctionContentMap[tag.textContent];
+            if (content) {
+                activationFunctionArticle.innerHTML = content;
+                MathJax.typeset();
+            }
+        });
+    });
+
 });
 
 let tags = document.querySelectorAll(".tag");
@@ -96,13 +159,18 @@ tags[0].classList.add('active');
 
 tags.forEach(tag => {
     tag.addEventListener('click', () => {
-        tag.classList.toggle('active');
+        tags.forEach(t => t.classList.remove('active'));
+        tag.classList.add('active');
     });
 });
 
-tags.forEach(tag => {
+
+let activationFunctionTags = document.querySelectorAll(".function-btn");
+activationFunctionTags[0].classList.add('active');
+
+activationFunctionTags.forEach(tag => {
     tag.addEventListener('click', () => {
-        tags.forEach(t => t.classList.remove('active'));
+        activationFunctionTags.forEach(t => t.classList.remove('active'));
         tag.classList.add('active');
     });
 });

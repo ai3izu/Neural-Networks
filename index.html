@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sieci Neuronowe</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+        </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>  
     <script src="view.js" defer></script>
 </head>
 
@@ -84,16 +92,16 @@
         <aside class="full-width-span">
             <p>Interaktywna symulacja działania sieci neuronowej</p>
         </aside>
-        <div class="section-3">
+        <div class="section-4">
             <h3 class="section-title">Funkcje aktywacji</h3>
-            <div class="section-3-container">
+            <div class="section-4-container">
                 <article class="activation-function-article">
-                    <p>Opis wybranej funkcji aktywacji.</p>
                 </article>
                 <aside class="activation-function-aside">
                     <button class="function-btn" data-function="relu">ReLU</button>
                     <button class="function-btn" data-function="sigmoid">Sigmoid</button>
                     <button class="function-btn" data-function="tanh">Tanh</button>
+                    <button class="function-btn" data-function="softmax">Softmax</button>
                 </aside>
             </div>
         </div>
