@@ -13,14 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
             <li><p><strong>- Neurony:</strong> Podstawowe jednostki przetwarzające informacje, które odbierają dane, 
                     przetwarzają je i przesyłają dalej.
             </p></li>
-            <li><p><strong>-Warstwy:</strong> Sieci neuronowe składają się z trzech głównych rodzajów warstw: 
+            <li><p><strong>- Warstwy:</strong> Sieci neuronowe składają się z trzech głównych rodzajów warstw: 
                     warstwy wejściowej (gdzie wprowadzane są dane), warstw ukrytych (gdzie odbywa się przetwarzanie) 
                     oraz warstwy wyjściowej (gdzie generowane są końcowe wyniki).
             </p></li>
-            <li><p><strong>-Wagi:</strong> Każde połączenie między neuronami ma przypisaną wagę, która określa, 
+            <li><p><strong>- Wagi:</strong> Każde połączenie między neuronami ma przypisaną wagę, która określa, 
                     jak ważny jest dany sygnał w procesie podejmowania decyzji przez sieć. 
             </p></li>
-            <li><p><strong>-Funkcje aktywacji:</strong> Funkcje te pomagają neuronowi zdecydować, 
+            <li><p><strong>- Funkcje aktywacji:</strong> Funkcje te pomagają neuronowi zdecydować, 
                     czy powinien przekazać sygnał dalej, a także w jaki sposób. 
                     Wiele różnych funkcji aktywacji może być używanych, w tym popularne funkcje, 
                     takie jak ReLU (Rectified Linear Unit) czy sigmoidalna. 
@@ -38,15 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
         Oto szczegółowy opis tego, jak to działa:
         </p>
         <ol>
-            <li><p>Wprowadzenie danych: Proces zaczyna się od wprowadzenia danych do sieci neuronowej. Dla przykładu, w przypadku rozpoznawania obrazów, dane wejściowe mogą zawierać piksele obrazu. Każdy piksel jest reprezentowany jako liczba (np. poziom szarości lub wartości RGB). 
+            <li><p><strong>Wprowadzenie danych:</strong> Proces zaczyna się od wprowadzenia danych do sieci neuronowej. Dla przykładu, w przypadku rozpoznawania obrazów, dane wejściowe mogą zawierać piksele obrazu. Każdy piksel jest reprezentowany jako liczba (np. poziom szarości lub wartości RGB). 
             </p></li>
-            <li><p>Przetwarzanie danych w warstwach: Po wprowadzeniu danych do warstwy wejściowej, są one przesyłane do warstw ukrytych. W każdej warstwie każdy neuron wykonuje obliczenia, które polegają na pomnożeniu wartości wejściowych przez przypisane wagi i dodaniu tzw. biasu (dodatkowej wartości, która pomaga w podejmowaniu decyzji). Wynik tego obliczenia przechodzi przez funkcję aktywacji, która decyduje, czy neuron “uaktywni się” i przekaże wynik do neuronów w następnej warstwie. 
+            <li><p><strong>Przetwarzanie danych w warstwach:</strong> Po wprowadzeniu danych do warstwy wejściowej, są one przesyłane do warstw ukrytych. W każdej warstwie każdy neuron wykonuje obliczenia, które polegają na pomnożeniu wartości wejściowych przez przypisane wagi i dodaniu tzw. biasu (dodatkowej wartości, która pomaga w podejmowaniu decyzji). Wynik tego obliczenia przechodzi przez funkcję aktywacji, która decyduje, czy neuron “uaktywni się” i przekaże wynik do neuronów w następnej warstwie. 
             </p></li>
-            <li><p>Generowanie wyników: Po przetworzeniu przez wszystkie warstwy, dane docierają do warstwy wyjściowej, gdzie generowane są ostateczne wyniki. Na przykład, w przypadku klasyfikacji obrazów, wynikiem może być prawdopodobieństwo, że dany obraz przedstawia kota, psa lub inny obiekt. 
+            <li><p><strong>Generowanie wyników:</strong> Po przetworzeniu przez wszystkie warstwy, dane docierają do warstwy wyjściowej, gdzie generowane są ostateczne wyniki. Na przykład, w przypadku klasyfikacji obrazów, wynikiem może być prawdopodobieństwo, że dany obraz przedstawia kota, psa lub inny obiekt. 
             </p></li>
-            <li><p>Uczenie się: Proces uczenia się polega na dostosowywaniu wag w połączeniach między neuronami na podstawie błędów popełnionych przez sieć. Gdy sieć dokonuje predykcji, porównuje swoje wyniki z rzeczywistymi odpowiedziami (tzw. etykietami). Gdy występuje różnica, algorytm optymalizacji (najczęściej algorytm wstecznej propagacji błędu) oblicza, jak wagi powinny być zmienione, aby zminimalizować ten błąd. Proces ten powtarza się wielokrotnie w ramach treningu sieci, co pozwala jej na doskonalenie swoich umiejętności. 
+            <li><p><strong>Uczenie się:</strong> Proces uczenia się polega na dostosowywaniu wag w połączeniach między neuronami na podstawie błędów popełnionych przez sieć. Gdy sieć dokonuje predykcji, porównuje swoje wyniki z rzeczywistymi odpowiedziami (tzw. etykietami). Gdy występuje różnica, algorytm optymalizacji (najczęściej algorytm wstecznej propagacji błędu) oblicza, jak wagi powinny być zmienione, aby zminimalizować ten błąd. Proces ten powtarza się wielokrotnie w ramach treningu sieci, co pozwala jej na doskonalenie swoich umiejętności. 
             </p></li>
-            <li><p>Walidacja i testowanie: Po zakończeniu etapu szkolenia, sieć neuronowa jest testowana na nowym zbiorze danych, który nie był używany w trakcie trenowania. To pozwala ocenić, jak dobrze sieć radzi sobie z zadaniami i jak generalizuje nauczone wzorce.    
+            <li><p><strong>Walidacja i testowanie:</strong> Po zakończeniu etapu szkolenia, sieć neuronowa jest testowana na nowym zbiorze danych, który nie był używany w trakcie trenowania. To pozwala ocenić, jak dobrze sieć radzi sobie z zadaniami i jak generalizuje nauczone wzorce.    
             </p></li>
         </ol>
         <p> Proces działania sieci neuronowych jest złożony, ale dzięki jego zrozumieniu możemy lepiej docenić, jak potężnym narzędziem są sieci neuronowe w rozwiązywaniu różnorodnych problemów w praktyce. </p>
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>`,
         "Sigmoid": `
             <p>
-                Sigmoid to funkcja aktywacji przekształcająca wartości wejściowe na przedział \(0, 1)\. Sprawdza się dobrze
+                Sigmoid to funkcja aktywacji przekształcająca wartości wejściowe na przedział <br> \(0, 1)\. Sprawdza się dobrze
                 w klasyfikacji binarnej, gdzie potrzebujemy wykryć jedną z dwóch kategorii.</br>
                 Jej wzór matematyczny to:
             </p>
@@ -146,8 +146,15 @@ document.addEventListener("DOMContentLoaded", () => {
         tag.addEventListener("click", () => {
             const content = activationFunctionContentMap[tag.textContent];
             if (content) {
-                activationFunctionArticle.innerHTML = content;
-                MathJax.typeset();
+                activationFunctionArticle.innerHTML = '';
+                setTimeout(() => {
+                    activationFunctionArticle.innerHTML = content;
+                    activationFunctionArticle.style.animation = ' ';
+                    activationFunctionArticle.style.animation = 'none';
+                    setTimeout(() => activationFunctionArticle.p.style.animation = 'fadeIn 1s ease-in-out forwards', 10);
+                    MathJax.typeset();
+                }, 10);
+            
             }
         });
     });
@@ -174,3 +181,6 @@ activationFunctionTags.forEach(tag => {
         tag.classList.add('active');
     });
 });
+
+
+
