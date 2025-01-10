@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Sieci Neuronowe</title>
     <link rel="stylesheet" href="style.css">
     <script>
@@ -18,6 +24,19 @@
 </head>
 
 <body>
+    <nav class="sticky-menu">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="#section-intro">Historia</a></li>
+            <li><a href="#section-1">Wprowadzenie</a></li>
+            <li><a href="#section-2">Rodzaje</a></li>
+            <li><a href="#section-3">Funkcje aktywacji</a></li>
+        </ul>
+    </nav>
     <div class="layout-wrapper">
         <div class="cover-wrapper">
             <header>
@@ -34,18 +53,200 @@
                 </div>
             </div>
         </div>
-        <div class="section-1">
-            <h3 class="section-title">Wprowadzenie</h3>
-            <nav class="article-tags">
-                <span class="tag glow">O sieciach</span>
-                <span class="tag glow">Działanie</span>
-                <span class="tag glow">Zastosowanie</span>
-            </nav>
+        <div id="section-intro" class="section-intro">
+            <h3 class="section-title">Historia sieci neuronowych</h3>
+            <div class="section-intro-article">
+                <p>Sieci neuronowe mają swoje początki w latach 40. XX wieku, kiedy to amerykański neurolog Warren
+                    McCulloch i matematyk Walter Pitts zaproponowali pierwszy matematyczny model sztucznego neuronu. Ich
+                    koncepcja była inspirowana strukturą ludzkiego mózgu i miała na celu stworzenie systemu, który
+                    będzie w stanie podejmować decyzje na podstawie otrzymanych sygnałów. Choć model był bardzo prosty,
+                    stanowił fundament, na którym oparto dalsze badania nad sztuczną inteligencją. Był to pierwszy krok
+                    w kierunku rozwoju sieci neuronowych, które miały w przyszłości zrewolucjonizować sposób, w jaki
+                    maszyny uczą się i rozwiązują problemy.</p>
+                <p>
+                    W 1958 roku Frank Rosenblatt zaprezentował perceptron – pierwszą praktyczną próbę stworzenia sieci
+                    neuronowej. Perceptron był algorytmem do rozpoznawania wzorców, który składał się z jednej warstwy
+                    sztucznych neuronów. Używany był do prostych zadań klasyfikacyjnych, jak np. rozróżnianie dwóch grup
+                    punktów na wykresie. Mimo że perceptron był obiecującym wynalazkiem, miał poważne ograniczenia,
+                    takie jak niemożność rozwiązania problemów o większej złożoności, jak na przykład problem XOR. Z
+                    tego powodu w latach 60-tych zainteresowanie tą technologią zaczęło słabnąć.
+                </p>
+                <p>
+                    Zainteresowanie sieciami neuronowymi spadło w latach 60-tych, kiedy to badacze, tacy jak Marvin
+                    Minsky i Seymour Papert, opublikowali książkę "Perceptrons", w której wykazali, że perceptron nie
+                    jest w stanie rozwiązywać bardziej skomplikowanych problemów. To spowodowało, że temat sztucznych
+                    sieci neuronowych na długie lata trafił w zapomnienie. Dopiero w latach 80-tych badania nad tymi
+                    technologiami zostały wznowione, dzięki pojawieniu się algorytmu wstecznej propagacji błędu
+                    (backpropagation), opracowanego przez Geoffrey’a Hinton’a, Davida Rumelharta i Ronalda Williamsa.
+                    Algorytm ten umożliwił sieciom neuronowym efektywne uczenie się na podstawie danych i dostosowywanie
+                    wag w celu poprawy wyników. To był przełom, który ponownie obudził zainteresowanie tą dziedziną.
 
-            <div id="article-content">
+                </p>
+                <p>W miarę jak rozwijała się technologia komputerowa, a zwłaszcza moc obliczeniowa komputerów,
+                    możliwości sieci neuronowych zaczęły rosnąć. Dzięki lepszemu dostępowi do danych (big data) i
+                    szybszym komputerom, sieci neuronowe mogły uczyć się bardziej złożonych wzorców, takich jak
+                    rozpoznawanie obrazów czy analiza dźwięku. W 2006 roku Geoffrey Hinton po raz kolejny przyczynił się
+                    do przełomu, tym razem wprowadzając głębokie sieci neuronowe (deep learning), które umożliwiły
+                    znaczące postępy w wielu dziedzinach sztucznej inteligencji. Właśnie w tym okresie sieci neuronowe
+                    zaczęły odnosić prawdziwe sukcesy w takich dziedzinach jak rozpoznawanie obrazów czy tłumaczenie
+                    tekstów.
+                </p>
+                <p>Obecnie sieci neuronowe są podstawą wielu nowoczesnych technologii. Ich zastosowanie jest szerokie i
+                    obejmuje takie dziedziny jak medycyna, gdzie pomagają w diagnozowaniu chorób, motoryzacja, w której
+                    wykorzystywane są do rozwoju autonomicznych pojazdów, czy przemysł rozrywkowy, gdzie są używane do
+                    tworzenia realistycznych obrazów i dźwięków. Sieci neuronowe stały się fundamentem współczesnej
+                    sztucznej inteligencji, a ich rozwój wciąż trwa. Dzięki nieustannemu postępowi w nauce i
+                    technologii, możemy spodziewać się, że ich zastosowania będą się tylko rozszerzać, a same sieci będą
+                    stawały się coraz bardziej zaawansowane.
+                </p>
+                <p>Informacje zaczerpnięte ze źródła : "Neural Networks: A Comprehensive Foundation" autorstwa Simon'a
+                    Haykina.</p>
             </div>
         </div>
-        <div class="section-2">
+    </div>
+    <div id="section-1" class="section-1">
+        <h3 class="section-title">Wprowadzenie</h3>
+        <nav class="article-tags">
+            <span class="tag glow" data-section="O-sieciach">O sieciach</span>
+            <span class="tag glow" data-section="Dzialanie">Działanie</span>
+            <span class="tag glow" data-section="Zastosowanie">Zastosowanie</span>
+        </nav>
+
+        <div id="article-content">
+            <div id="O-sieciach" class="article-section">
+                <p>Sieci neuronowe to technologia, która została zainspirowana sposobem, w jaki działa ludzki mózg.
+                    Mózg składa się z miliardów neuronów, które komunikują się ze sobą, przetwarzając informacje
+                    i ucząc się na podstawie doświadczeń. Podobnie, sieci neuronowe składają się z
+                    wirtualnych neuronów połączonych w warstwy. Każdy neuron w sieci ma swoje wagi, które określają,
+                    jak silnie wpływa na sygnały przekazywane do kolejnych neuronów.</p>
+                <ol>
+                    <li>
+                        <p><strong>- Neurony:</strong> Podstawowe jednostki przetwarzające informacje, które
+                            odbierają dane,
+                            przetwarzają je i przesyłają dalej.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>- Warstwy:</strong> Sieci neuronowe składają się z trzech głównych rodzajów
+                            warstw:
+                            warstwy wejściowej (gdzie wprowadzane są dane), warstw ukrytych (gdzie odbywa się
+                            przetwarzanie)
+                            oraz warstwy wyjściowej (gdzie generowane są końcowe wyniki).
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>- Wagi:</strong> Każde połączenie między neuronami ma przypisaną wagę, która
+                            określa,
+                            jak ważny jest dany sygnał w procesie podejmowania decyzji przez sieć.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>- Funkcje aktywacji:</strong> Funkcje te pomagają neuronowi zdecydować,
+                            czy powinien przekazać sygnał dalej, a także w jaki sposób.
+                            Wiele różnych funkcji aktywacji może być używanych, w tym popularne funkcje,
+                            takie jak ReLU (Rectified Linear Unit) czy sigmoidalna.
+                        </p>
+                    </li>
+                </ol>
+                <p>Sieci neuronowe uczą się na podstawie danych, co oznacza, że im więcej danych mają do analizy,
+                    tym lepsze stają się w rozpoznawaniu wzorców. Uczy się ich w sposób podobny do tego,
+                    jak uczymy się my – przy pomocy doświadczenia. Dzięki temu są w stanie dostosować się do różnych
+                    zadań
+                    i sytuacji.
+                </p>
+            </div>
+            <div id="Dzialanie" class="article-section" style="display: none;">
+                <p>Działanie sieci neuronowych można podzielić na kilka kluczowych kroków,
+                    które obejmują zarówno proces wprowadzania danych, jak i ich przetwarzanie oraz uczenie się.
+                    Oto szczegółowy opis tego, jak to działa:
+                </p>
+                <ol>
+                    <li>
+                        <p><strong>Wprowadzenie danych:</strong> Proces zaczyna się od wprowadzenia danych do sieci
+                            neuronowej. Dla przykładu, w przypadku rozpoznawania obrazów, dane wejściowe mogą
+                            zawierać piksele obrazu. Każdy piksel jest reprezentowany jako liczba (np. poziom
+                            szarości lub wartości RGB).
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Przetwarzanie danych w warstwach:</strong> Po wprowadzeniu danych do warstwy
+                            wejściowej, są one przesyłane do warstw ukrytych. W każdej warstwie każdy neuron
+                            wykonuje obliczenia, które polegają na pomnożeniu wartości wejściowych przez przypisane
+                            wagi i dodaniu tzw. biasu (dodatkowej wartości, która pomaga w podejmowaniu decyzji).
+                            Wynik tego obliczenia przechodzi przez funkcję aktywacji, która decyduje, czy neuron
+                            “uaktywni się” i przekaże wynik do neuronów w następnej warstwie.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Generowanie wyników:</strong> Po przetworzeniu przez wszystkie warstwy, dane
+                            docierają do warstwy wyjściowej, gdzie generowane są ostateczne wyniki. Na przykład, w
+                            przypadku klasyfikacji obrazów, wynikiem może być prawdopodobieństwo, że dany obraz
+                            przedstawia kota, psa lub inny obiekt.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Uczenie się:</strong> Proces uczenia się polega na dostosowywaniu wag w
+                            połączeniach między neuronami na podstawie błędów popełnionych przez sieć. Gdy sieć
+                            dokonuje predykcji, porównuje swoje wyniki z rzeczywistymi odpowiedziami (tzw.
+                            etykietami). Gdy występuje różnica, algorytm optymalizacji (najczęściej algorytm
+                            wstecznej propagacji błędu) oblicza, jak wagi powinny być zmienione, aby zminimalizować
+                            ten błąd. Proces ten powtarza się wielokrotnie w ramach treningu sieci, co pozwala jej
+                            na doskonalenie swoich umiejętności.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Walidacja i testowanie:</strong> Po zakończeniu etapu szkolenia, sieć neuronowa
+                            jest testowana na nowym zbiorze danych, który nie był używany w trakcie trenowania. To
+                            pozwala ocenić, jak dobrze sieć radzi sobie z zadaniami i jak generalizuje nauczone
+                            wzorce.
+                        </p>
+                    </li>
+                </ol>
+                <p> Proces działania sieci neuronowych jest złożony, ale dzięki jego zrozumieniu możemy lepiej
+                    docenić, jak potężnym narzędziem są sieci neuronowe w rozwiązywaniu różnorodnych problemów w
+                    praktyce. </p>
+            </div>
+            <div id="Zastosowanie" class="article-section" style="display: none;">
+                <p>Zastosowanie sieci neuronowych jest niezwykle różnorodne i wpływa na wiele aspektów naszego
+                    życia.
+                    W medycynie, na przykład, sieci neuronowe są wykorzystywane do analizy zdjęć diagnostycznych,
+                    takich
+                    jak rentgeny, tomografie komputerowe czy rezonansy magnetyczne. Dzięki zaawansowanej analizie
+                    obrazów,
+                    lekarze mogą szybciej wykrywać choroby, takie jak nowotwory, co znacząco poprawia szanse na
+                    wczesne leczenie
+                    i zwiększa skuteczność diagnozy.
+                </p>
+                <p>W sektorze motoryzacyjnym sieci neuronowe są kluczowym elementem technologii autonomicznych
+                    pojazdów.
+                    Umożliwiają one rozpoznawanie znaków drogowych, śledzenie ruchu innych uczestników drogi oraz
+                    podejmowanie
+                    decyzji w czasie rzeczywistym. Dzięki tym technologiom, autonomiczne pojazdy są w stanie
+                    poruszać się po
+                    drogach w sposób bezpieczny i efektywny. Dodatkowo, systemy wspomagania kierowcy, takie jak
+                    automatyczne
+                    parkowanie czy asystent pasa ruchu, również korzystają z możliwości, jakie dają sieci neuronowe.
+                </p>
+                <p>W branży finansowej sieci neuronowe pomagają w wykrywaniu oszustw i analizie ryzyka.
+                    Dzięki analizie dużych zbiorów danych w czasie rzeczywistym, instytucje finansowe mogą
+                    efektywniej
+                    identyfikować nieprawidłowości i chronić klientów przed stratami. Ponadto, sieci neuronowe
+                    umożliwiają
+                    przewidywanie zmian na rynkach finansowych, co pozwala na dokładniejsze dopasowanie ofert do
+                    potrzeb
+                    klientów oraz lepsze zarządzanie portfelami inwestycyjnymi.
+                </p>
+                <p>W miarę jak technologia się rozwija, możemy spodziewać się, że zastosowania sieci neuronowych
+                    będą się
+                    nadal rozwijać. Będą one odgrywać coraz większą rolę w innowacjach technologicznych oraz w
+                    codziennym życiu,
+                    co czyni je fascynującym narzędziem przyszłości. Sieci neuronowe stanowią więc nie tylko obecny
+                    trend,
+                    ale także fundament przyszłości w wielu branżach.
+                </p>
+            </div>
+        </div>
+        <div id="section-2" class="section-2">
             <h3 class="section-title">Rodzaje sieci neuronowych</h3>
             <div class="section-2-container">
                 <article class="neural-network-types-article">
@@ -92,24 +293,55 @@
         <aside class="full-width-span">
             <p>Interaktywna symulacja działania sieci neuronowej</p>
         </aside>
-        <div class="section-3">
-            <div class="section-3-container">
-                <canvas id="myCanvas" width="200" height="100">
-                    
-                </canvas>
-            </div>
-        </div>
-        <div class="section-4">
+        <div id="section-3" class="section-3">
             <h3 class="section-title">Funkcje aktywacji</h3>
-            <div class="section-4-container">
+            <div class="section-3-container">
                 <article class="activation-function-article">
-                    <p>ReLU to funkcja aktywacji, która przepuszcza wartość wejściową <em>x</em>, jeśli jest dodatnia, a
-                        w przeciwnym przypadku zwraca <em>0</em>.<br> Matematycznie można ją zapisać za pomocą wzoru:
-                    </p>
-                    <p>$$f(x)=\max(0, x)$$</p>
-                    <p>ReLU wprowadza nieliniowość do modelu, co pozwala sieci neuronowej lepiej uczyć się
-                        złożonych zależności.
-                    </p>
+                    <div id="relu" class="activation-function-text">
+                        <p>ReLU to funkcja aktywacji, która przepuszcza wartość wejściową <em>x</em>, jeśli jest
+                            dodatnia, a
+                            w przeciwnym przypadku zwraca <em>0</em>.<br> Matematycznie można ją zapisać za pomocą
+                            wzoru:
+                        </p>
+                        <p>$$f(x)=\max(0, x)$$</p>
+                        <p>ReLU wprowadza nieliniowość do modelu, co pozwala sieci neuronowej lepiej uczyć się
+                            złożonych zależności.
+                        </p>
+                    </div>
+                    <div id="sigmoid" class="activation-function-text" style="display: none;">
+                        <p>
+                            Sigmoid to funkcja aktywacji przekształcająca wartości wejściowe na przedział <br> (0, 1).
+                            Sprawdza się dobrze
+                            w klasyfikacji binarnej, gdzie potrzebujemy wykryć jedną z dwóch kategorii.</br>
+                            Jej wzór matematyczny to:
+                        </p>
+                        <p>
+                            $$f(x) = \frac{1}{1 + e^{-x}}$$
+                        </p>
+                        <p>
+                            Intuicyjnie pokazuje "pewność" modelu - im bliżej 1, tym bardziej pewny.
+                        </p>
+                    </div>
+                    <div id="tanh" class="activation-function-text" style="display: none;">
+                        <p>Tanh to funkcja, która przypomina sinus, ale działa na wartościach od -1, do 1.
+                            Gdy wejście jest bardzo duże, wynik zbliża się do 1, w odwrotnej situacji -1. Wyrażona jest
+                            wzorem:
+                        </p>
+                        <p>
+                            $$f(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$$
+                        </p>
+                        <p>
+                            Skaluje dane, dzięki czemu są symetryczne wokół zera, co pomaga w uczeniu sieci.
+                        </p>
+                    </div>
+                    <div id="softmax" class="activation-function-text" style="display: none;">
+                        <p> Softmax to funkcja, która przekształca liczby na prawdopodobieństwa, sumujące się do 1.
+                            Przydaje się w klasyfikacji wieloklasowej — mówi, która klasa ma największą szansę.
+                        </p>
+                        <p>$$\mathbf{x} = [x_1, x_2, \dots, x_n]$$</p>
+                        <p>$$f(x_i) = \frac{e^{x_i}}{\sum_{j=1}^n e^{x_j}}$$</p>
+                        <p>Intuicyjnie rozdziela wyniki, skupiając się na dominujących wartościach.</p>
+                    </div>
                 </article>
                 <aside class="activation-function-aside">
                     <button class="function-btn" data-function="relu">ReLU</button>
