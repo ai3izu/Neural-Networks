@@ -11,7 +11,7 @@
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Sieci Neuronowe</title>
-    <link rel="stylesheet" href="style.css" media="screen">
+    <link rel="stylesheet" href="style.css">
     <script>
         MathJax = {
             tex: {
@@ -35,6 +35,7 @@
             <li><a href="#section-intro">Historia</a></li>
             <li><a href="#section-1">Wprowadzenie</a></li>
             <li><a href="#section-2">Rodzaje</a></li>
+            <li><a href="#simulation">Symulacja</a></li>
             <li><a href="#section-3">Funkcje aktywacji</a></li>
         </ul>
     </nav>
@@ -291,9 +292,56 @@
                 </aside>
             </div>
         </div>
-        <aside class="full-width-span">
+        <aside id="simulation" class="full-width-span">
             <p>Interaktywna symulacja działania sieci neuronowej</p>
         </aside>
+        <div class="neural-simulation-user-manual">
+            <p>
+                Witaj w symulacji sieci neuronowej! Ta aplikacja pozwala Ci zbudować prostą sieć neuronową i zobaczyć,
+                jak działa w praktyce.
+                Aby przeprowadzić symulację, wykonaj następujące kroki:
+            </p>
+            <ul>
+                <li><strong>Ustaw liczby wejściowe:</strong> Użyj przycisków "+" i "-" w sekcji "Wejścia", aby
+                    dostosować liczbę wejść, które chcesz mieć. Możesz mieć od 1 do 3 wejść.</li>
+                <li><strong>Dodaj warstwy ukryte:</strong> Kliknij "+" w sekcji "Warstwy ukryte", aby dodać warstwy
+                    neuronów. Możesz mieć maksymalnie 3 warstwy, a w każdej z nich od 1 do 4 neuronów.</li>
+                <li><strong>Ustaw wyjścia:</strong> Użyj przycisków w sekcji "Wyjście", aby określić liczbę neuronów
+                    wyjściowych (od 1 do 3).</li>
+                <li><strong>Losuj wagi:</strong> Kliknij przycisk "Wagi", aby zainicjować wagi neuronów losowymi
+                    wartościami.</li>
+                <li><strong>Wprowadź dane wejściowe:</strong> Wprowadź wartości dla każdego wejścia w odpowiednich
+                    polach.</li>
+                <li><strong>Uruchom symulację:</strong> Kliknij przycisk "Symulacja", aby zobaczyć wyniki. Zobaczysz
+                    dane wejściowe, wagi neuronów oraz wyniki wyjściowe.</li>
+            </ul>
+        </div>
+        <div class="neural-simulation-container">
+            <div class="controls">
+                <p>Wejścia</p>
+                <button onclick="addInput()">+</button>
+                <button onclick="removeInput()">-</button>
+                <p>Warstwy ukryte</p>
+                <button onclick="addHiddenLayer()">+</button>
+                <button onclick="removeHiddenLayer()">-</button>
+                <p>Wyjście</p>
+                <button onclick="addOutput()">+</button>
+                <button onclick="removeOutput()">-</button>
+                <button onclick="randomizeWeights()">Wagi</button>
+                <button onclick="runSimulation()">Symulacja</button>
+            </div>
+            <div id="input-fields-container">
+                <input type="number" class="input-field" placeholder="Wejście 1" />
+                <input type="number" class="input-field" placeholder="Wejście 2" />
+            </div>
+            <div id="hidden-layers-controls"></div>
+            <canvas id="neural-canvas"></canvas>
+            <script src="/neural-functions/simulation.js"></script>
+            <div class="neural-simulation-output">
+                <h4 class="neural-simulation-output-title">Wyniki symulacji</h4>
+                <div id="output-details"></div>
+            </div>
+        </div>
         <div id="section-3" class="section-3">
             <h3 class="section-title">Funkcje aktywacji</h3>
             <div class="section-3-container">

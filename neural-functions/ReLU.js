@@ -1,5 +1,7 @@
-class ReLU{
-    calc(x){ return Math.max(0, x)}
-
-    drev(x){ return x > 0 ? 1 : 0 }
+class ReLU {
+    static activate(x) {
+        return Math.max(0, x);
+    }
 }
+
+export default ReLU;
